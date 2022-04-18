@@ -1,6 +1,6 @@
 <=---------------- About command line interface database project ----------------=>
 
-App Summary: takes somg information and stores it in a MongoDB database, CRUD operations can be used to read and write to the mongo documents.
+App Summary: takes song information and stores it in a MySQL database, CRUD operations can be used to read and write within the database tables.
 
 This application takes argument vectors upon script exectution: it requires a CRUD operation argument and additional song information arguments (excluding drop operation). For more information and use cases, see CLI APP USE section:
 
@@ -15,9 +15,29 @@ Note: CAPS in descriptions defines arguments.
 
 <=--------------------------------- CLI APP USE ---------------------------------=>
 
-CRUD Arguments:
+-------- CRUD Arguments for User -------- :
 
-• --add: places song info into the database collection - takes SONG, ALBUM, ARTIST and GENRE as arguments.
+• --add users: creates a new app user in users table - takes FIRSTNAME, SECONDNAME, USERNAME and PASSWORD as arguments.
+
+EXAMPLE: --add users --firstname John --secondname Johny -- username user123 --password password123
+
+===>>> note: all arguments are REQUIRED and therefore an error will be thrown if not all are supplied with valid data.
+
+• --update: changes the specified user data, being either username or password - takes TO as an arugument.
+
+EXAMPLE: --change password --to newpassword123
+
+===>>> note: obviously a user must be logged in for the changes to be applied.
+
+• --remove account: (!-WARNING-!) deletes the currently logged in user from the app - takes no additional arguments.
+
+EXAMPLE: --remove account
+
+===>>> note: --list can be set to "all" (--list all) to retrieve all documents currently present in the database collection.
+
+-------- CRUD Arguments for Songs -------- :
+
+• --add songs: places song info into the database collection - takes SONG, ALBUM, ARTIST and GENRE as arguments.
 
 EXAMPLE: --add --song "My Song" --artist "Me"
 

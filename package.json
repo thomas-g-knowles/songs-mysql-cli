@@ -5,5 +5,27 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.18.0",
     "yargs": "^17.4.0"
-  }
+  },
+  "name": "songs-mysql-cli",
+  "description": "<=---------------- About command line interface database project ----------------=>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "echo \"Starting CLI app\"",
+    "start": "node index.js",
+    "poststart": "echo \"Stopping CLI app\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomas-g-knowles/songs-mysql-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomas-g-knowles/songs-mysql-cli/issues"
+  },
+  "homepage": "https://github.com/thomas-g-knowles/songs-mysql-cli#readme"
 }
